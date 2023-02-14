@@ -3,7 +3,7 @@ About r-kml
 
 Home: http:www.r-project.org
 
-Package license: GPL-2.0-only
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-kml-feedstock/blob/main/LICENSE.txt)
 
