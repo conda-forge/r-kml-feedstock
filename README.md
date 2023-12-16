@@ -3,6 +3,7 @@ About r-kml-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-kml-feedstock/blob/main/LICENSE.txt)
 
+
 About r-kml
 -----------
 
@@ -11,6 +12,7 @@ Home: http:www.r-project.org
 Package license: GPL-2.0-or-later
 
 Summary: An implementation of k-means specifically design to cluster longitudinal data. It provides facilities to deal with missing value, compute several quality criterion (Calinski and Harabatz, Ray and Turie, Davies and Bouldin, BIC, ...) and propose a graphical interface for choosing the 'best' number of clusters.
+
 About r-kml
 -----------
 
@@ -139,7 +141,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
