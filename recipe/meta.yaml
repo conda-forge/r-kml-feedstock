@@ -1,6 +1,5 @@
 {% set version = "2.4.6.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-kml
@@ -13,9 +12,8 @@ source:
   sha256: a99c8f0d84645ef8a4e65053078c382e5a42b45fb1e02c8472c57eb6081f9e07
 
 build:
-  merge_build_host: true  # [win]
   skip: true  # [osx]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,7 +21,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -41,7 +41,6 @@ requirements:
     - r-longitudinaldata >=2.4
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-clv
     - r-longitudinaldata >=2.4
 
