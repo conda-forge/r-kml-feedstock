@@ -1,4 +1,4 @@
-{% set version = "2.4.6.1" %}
+{% set version = "2.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/kml_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kml/kml_{{ version }}.tar.gz
-  sha256: a99c8f0d84645ef8a4e65053078c382e5a42b45fb1e02c8472c57eb6081f9e07
+  sha256: cf98721015c7fb7624a57ad5c95a5be42936110628ddddf7f30a3fc7b07351e1
 
 build:
   skip: true  # [osx]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
