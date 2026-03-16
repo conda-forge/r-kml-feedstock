@@ -28,7 +28,6 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - xorg-libxfixes           # [linux]
   host:
     - r-base
     - r-clv
