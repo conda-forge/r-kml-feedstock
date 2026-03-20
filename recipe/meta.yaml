@@ -12,7 +12,7 @@ source:
   sha256: cf98721015c7fb7624a57ad5c95a5be42936110628ddddf7f30a3fc7b07351e1
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,16 +28,12 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
     - xorg-libxfixes           # [linux]
   host:
     - r-base
     - r-clv
     - r-longitudinaldata >=2.4
+    - libgl-devel                    # [linux]
   run:
     - r-base
     - r-clv
@@ -53,7 +49,8 @@ test:
 about:
   home: http:www.r-project.org
   license: GPL-2.0-or-later
-  summary: An implementation of k-means specifically design to cluster longitudinal data. It provides facilities to deal with missing value, compute several quality criterion (Calinski and Harabatz, Ray and Turie, Davies and Bouldin, BIC, ...) and propose a graphical interface for choosing the 'best' number of clusters.
+  summary: An implementation of k-means specifically design to cluster longitudinal data. It provides facilities to deal with missing value, compute several quality criterion (Calinski and Harabatz, Ray and Turie, Davies and Bouldin, BIC, ...) and propose a graphical interface for choosing the 'best' number of 
+    clusters.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
